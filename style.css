@@ -1,0 +1,176 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  font-family: "Montserrat", sans-serif;
+}
+
+.container {
+  width: 100%;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+}
+
+.box-1 {
+  width: 30%;
+  height: 70vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  background-color: #fdea71;
+  border-radius: 35px;
+  padding: 2rem;
+  z-index: 1;
+  box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.45) inset;
+  position: absolute;
+}
+
+.box-2 {
+  width: 30%;
+  height: 70vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  background-color: #fdea71;
+  border-radius: 35px;
+  padding: 2rem;
+  z-index: 99;
+  box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.45) inset;
+  position: absolute;
+}
+
+h1 {
+  font-size: 2.7rem;
+  color: #22577a;
+  margin: 1rem;
+  margin-bottom: 2rem;
+}
+
+.box-1 form {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  margin: 1rem;
+}
+
+.box-1 form div {
+  display: flex;
+  align-items: flex-start;
+  justify-content: flex-start;
+  font-size: 1.7rem;
+  color: #22577a;
+  margin: 1rem;
+}
+
+.box-1 form .salary input {
+  border: 2px solid black;
+  border-top: none;
+  border-left: none;
+  border-right: none;
+  background-color: transparent;
+  font-size: 1.5rem;
+  width: 100%;
+  height: 90%;
+  color: #22577a;
+}
+
+.children input {
+  border: 2px solid black;
+  border-top: none;
+  border-left: none;
+  border-right: none;
+  background-color: transparent;
+  font-size: 1.5rem;
+  width: 100%;
+  height: 90%;
+  color: #22577a;
+}
+
+.box-1 form .salary ::placeholder {
+  color: #22577a;
+}
+
+.children ::placeholder {
+  color: #22577a;
+}
+
+.box-1 form .salary input:focus {
+  outline: none;
+  box-shadow: none;
+  background-color: #fdea71;
+}
+
+.children input:focus {
+  outline: none;
+  box-shadow: none;
+  background-color: #fdea71;
+}
+
+.box-1 form .married {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  gap: 2rem;
+}
+
+.box-1 form .married .yes {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+}
+
+.box-1 form .married .no {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+}
+
+#submit {
+  border: none;
+  color: #fff;
+  font-size: 1.4rem;
+  font-weight: 600;
+  background-color: #22577a;
+  padding: 10px 25px;
+  border-radius: 10px;
+  cursor: pointer;
+  box-shadow: rgba(0, 0, 0, 0.07) 0px 1px 2px, rgba(0, 0, 0, 0.07) 0px 2px 4px,
+    rgba(0, 0, 0, 0.07) 0px 4px 8px, rgba(0, 0, 0, 0.07) 0px 8px 16px,
+    rgba(0, 0, 0, 0.07) 0px 16px 32px, rgba(0, 0, 0, 0.07) 0px 32px 64px;
+}
+
+#again {
+  border: none;
+  color: #fff;
+  font-size: 1.4rem;
+  font-weight: 600;
+  background-color: #22577a;
+  padding: 10px 25px;
+  border-radius: 10px;
+  cursor: pointer;
+  box-shadow: rgba(0, 0, 0, 0.07) 0px 1px 2px, rgba(0, 0, 0, 0.07) 0px 2px 4px,
+    rgba(0, 0, 0, 0.07) 0px 4px 8px, rgba(0, 0, 0, 0.07) 0px 8px 16px,
+    rgba(0, 0, 0, 0.07) 0px 16px 32px, rgba(0, 0, 0, 0.07) 0px 32px 64px;
+}
+
+.hidden {
+  display: none;
+}

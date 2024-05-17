@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <div class="container">
+      <div class="box-1">
+        <h1>tax calculator</h1>
+        <form>
+          <div class="salary">
+            <input type="number" id="salary" placeholder="salary" required />
+          </div>
+
+          <div class="children">
+            <input
+              type="number"
+              id="numChild"
+              placeholder="number of children"
+              required
+            />
+          </div>
+
+          <div class="married">
+            <div class="yes">
+              <input type="radio" name="status" id="married" />
+              <label for="married">married</label>
+            </div>
+            <div class="no">
+              <input type="radio" name="status" id="single" />
+              <label for="single">single</label>
+            </div>
+          </div>
+
+          <input type="submit" value="calculate your tax" id="submit" />
+        </form>
+      </div>
+
+      <div class="box-2 hidden">
+        <h1>your tax is <span id="taxSpan"></span></h1>
+        <input type="submit" value="calculate again" id="again" />
+      </div>
+    </div>
+    <script src="index.js"></script>
+  </body>
+</html>
