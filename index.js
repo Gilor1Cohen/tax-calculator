@@ -18,12 +18,12 @@ document.querySelector("#submit").addEventListener("click", () => {
       if (numChild <= 0) {
         box1.classList.add("hidden");
         box2.classList.remove("hidden");
-        tax = (20 * tax) / 100;
+        tax = salary * 0.2;
         taxSpan.innerHTML = Math.max(0, tax);
       } else if (numChild > 0) {
         box1.classList.add("hidden");
         box2.classList.remove("hidden");
-        tax = (20 * tax) / 100 - numChild * 100;
+        tax = salary * 0.2 - numChild * 100;
         taxSpan.innerHTML = Math.max(0, tax);
       }
     }
@@ -39,12 +39,12 @@ document.querySelector("#submit").addEventListener("click", () => {
       if (numChild <= 0) {
         box1.classList.add("hidden");
         box2.classList.remove("hidden");
-        tax = (20 * tax) / 100;
+        tax = salary * 0.2;
         taxSpan.innerHTML = Math.max(0, tax);
       } else if (numChild > 0) {
         box1.classList.add("hidden");
         box2.classList.remove("hidden");
-        tax = (20 * tax) / 100 - numChild * 100;
+        tax = salary * 0.2 - numChild * 100;
         taxSpan.innerHTML = Math.max(0, tax);
       }
     }
