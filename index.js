@@ -20,21 +20,11 @@ document.querySelector("#submit").addEventListener("click", () => {
         box2.classList.remove("hidden");
         tax = (20 * tax) / 100;
         taxSpan.innerHTML = tax;
-        if (tax < 0) {
-          tax = 0;
-        } else if (tax > 0) {
-          tax = tax;
-        }
       } else if (numChild > 0) {
         box1.classList.add("hidden");
         box2.classList.remove("hidden");
         let refundChild = numChild * 100;
         tax = (20 * tax) / 100 - refundChild;
-        if (tax < 0) {
-          tax = 0;
-        } else if (tax > 0) {
-          tax = tax;
-        }
         taxSpan.innerHTML = tax;
       }
     }
@@ -52,21 +42,11 @@ document.querySelector("#submit").addEventListener("click", () => {
         box2.classList.remove("hidden");
         tax = (20 * tax) / 100;
         taxSpan.innerHTML = tax;
-        if (tax < 0) {
-          tax = 0;
-        } else if (tax > 0) {
-          tax = tax;
-        }
       } else if (numChild > 0) {
         box1.classList.add("hidden");
         box2.classList.remove("hidden");
         let refundChild = numChild * 100;
         tax = (20 * tax) / 100 - refundChild;
-        if (tax < 0) {
-          tax = 0;
-        } else if (tax > 0) {
-          tax = tax;
-        }
         taxSpan.innerHTML = tax;
       }
     }
