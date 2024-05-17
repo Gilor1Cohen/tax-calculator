@@ -22,7 +22,7 @@ document.querySelector("#submit").addEventListener("click", () => {
         taxSpan.innerHTML = tax;
         if (tax < 0) {
           tax = 0;
-        } else {
+        } else if (tax > 0) {
           tax = tax;
         }
       } else if (numChild > 0) {
