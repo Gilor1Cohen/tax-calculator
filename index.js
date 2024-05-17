@@ -11,35 +11,23 @@ document.querySelector("#submit").addEventListener("click", () => {
   if (document.querySelector("#married").checked) {
     tax = parseInt(-500);
     if (salary < 2000) {
-      if (salary < 2000) {
+      box1.classList.add("hidden");
+      box2.classList.remove("hidden");
+      taxSpan.innerHTML = 0;
+    } else if (salary >= 2000) {
+      if (numChild <= 0) {
         box1.classList.add("hidden");
         box2.classList.remove("hidden");
-        taxSpan.innerHTML = 0;
-      } else if (salary >= 2000) {
-        if (numChild <= 0) {
-          box1.classList.add("hidden");
-          box2.classList.remove("hidden");
-          tax = (20 * tax) / 100;
-          if (tax < 0) {
-            tax = 0;
-          } else {
-            tax = (20 * tax) / 100;
-          }
-          taxSpan.innerHTML = tax;
-        } else if (numChild > 0) {
-          box1.classList.add("hidden");
-          box2.classList.remove("hidden");
-          let refundChild = numChild * 100;
-          tax = (20 * tax) / 100 - refundChild;
-          if (tax < 0) {
-            tax = 0;
-          } else {
-            tax = (20 * tax) / 100 - refundChild;
-          }
-          taxSpan.innerHTML = tax;
-        }
+        tax = (20 * tax) / 100;
+        taxSpan.innerHTML = Math.max(0, tax);
+      } else if (numChild > 0) {
+        box1.classList.add("hidden");
+        box2.classList.remove("hidden");
+        tax = (20 * tax) / 100 - numChild * 100;
+        taxSpan.innerHTML = Math.max(0, tax);
       }
     }
+  }
 
   if (document.querySelector("#single").checked) {
     tax = parseInt(0);
@@ -52,23 +40,12 @@ document.querySelector("#submit").addEventListener("click", () => {
         box1.classList.add("hidden");
         box2.classList.remove("hidden");
         tax = (20 * tax) / 100;
-        if (tax < 0) {
-          tax = 0;
-        } else {
-          tax = (20 * tax) / 100;
-        }
-        taxSpan.innerHTML = tax;
+        taxSpan.innerHTML = Math.max(0, tax);
       } else if (numChild > 0) {
         box1.classList.add("hidden");
         box2.classList.remove("hidden");
-        let refundChild = numChild * 100;
-        tax = (20 * tax) / 100 - refundChild;
-        if (tax < 0) {
-          tax = 0;
-        } else {
-          tax = (20 * tax) / 100 - refundChild;
-        }
-        taxSpan.innerHTML = tax;
+        tax = (20 * tax) / 100 - numChild * 100;
+        taxSpan.innerHTML = Math.max(0, tax);
       }
     }
   }
