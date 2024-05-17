@@ -32,7 +32,7 @@ document.querySelector("#submit").addEventListener("click", () => {
         tax = (20 * tax) / 100 - refundChild;
         if (tax < 0) {
           tax = 0;
-        } else {
+        } else if (tax > 0) {
           tax = tax;
         }
         taxSpan.innerHTML = tax;
@@ -45,13 +45,18 @@ document.querySelector("#submit").addEventListener("click", () => {
     if (salary < 2000) {
       box1.classList.add("hidden");
       box2.classList.remove("hidden");
-      taxSpan.innerHTML = tax;
+      taxSpan.innerHTML = 0;
     } else if (salary >= 2000) {
       if (numChild <= 0) {
         box1.classList.add("hidden");
         box2.classList.remove("hidden");
         tax = (20 * tax) / 100;
         taxSpan.innerHTML = tax;
+        if (tax < 0) {
+          tax = 0;
+        } else if (tax > 0) {
+          tax = tax;
+        }
       } else if (numChild > 0) {
         box1.classList.add("hidden");
         box2.classList.remove("hidden");
@@ -59,7 +64,7 @@ document.querySelector("#submit").addEventListener("click", () => {
         tax = (20 * tax) / 100 - refundChild;
         if (tax < 0) {
           tax = 0;
-        } else {
+        } else if (tax > 0) {
           tax = tax;
         }
         taxSpan.innerHTML = tax;
